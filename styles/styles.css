@@ -80,6 +80,11 @@ p, ul, ol {
   margin: 0 1rem 2rem;
   display: flex;
   flex-direction: column;
+  transform: rotate(0);
+}
+.card--party {
+  transform: rotate(720deg);
+  transition: transform 1s ease;
 }
 .card__image {
   display: block;

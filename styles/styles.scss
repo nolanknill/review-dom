@@ -84,6 +84,12 @@ p, ul, ol {
     margin: 0 1rem 2rem;
     display: flex;
     flex-direction: column;
+    transform: rotate(0);
+
+    &--party {
+        transform: rotate(720deg);
+        transition: transform 1s ease;
+    }
 
     &__image {
         display: block;
