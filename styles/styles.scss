@@ -1,3 +1,6 @@
+$color-primary: #1358DB;
+$color-secondary: #FFCF00;
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -16,13 +19,13 @@ p, ul, ol {
 }
 
 .header {
-    background-color: #1358DB;
+    background-color: $color-primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
     color: white;
-    border-bottom: 5px solid #FFCF00;
+    border-bottom: 5px solid $color-secondary;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     
     &__title {
@@ -84,11 +87,12 @@ p, ul, ol {
     margin: 0 1rem 2rem;
     display: flex;
     flex-direction: column;
-    transform: rotate(0);
 
     &--party {
         transform: rotate(720deg);
         transition: transform 1s ease;
+        background-color: $color-primary;
+        color: $color-secondary;
     }
 
     &__image {
@@ -122,8 +126,8 @@ p, ul, ol {
 
 .button {
     display: inline-block;
-    background-color: #1358DB;
-    border: 1px solid #1358DB;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: white;
@@ -132,7 +136,7 @@ p, ul, ol {
 
     &--party {
         background-color: transparent;
-        color: #1358DB;
+        color: $color-primary;
 
         &::before {
             content: '🎉 ';

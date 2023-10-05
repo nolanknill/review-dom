@@ -50,17 +50,13 @@ people.forEach((person) => {
     displayPerson(person);
 });
 
-// loop to grab a single person
-    // for each person -> displayPerson()
-
 /**
+ * Builds a card element containing a person's
+ * information and appends it to the DOM
  * 
  * @param {Object} person 
  */
 function displayPerson( person ) {
-    // Build the "card" element
-    // Use the person object's properties as information in each element
-
     const cardEl = document.createElement("article");
     cardEl.classList.add("card");
 
@@ -94,9 +90,10 @@ function displayPerson( person ) {
     const dessertsHeadingEl = document.createElement("p");
     dessertsHeadingEl.textContent = "Favourite desserts:";
 
-    // <ol><li>${person.favourites.dessert}</ol>
+    // <ol></ol>
     const dessertsEl = document.createElement("ol");
 
+    // <li>${person.favourites.dessert}</li>
     person.favourites.desserts.forEach(( dessert ) => {
         const dessertEl = document.createElement("li");
         dessertEl.textContent = dessert;
@@ -127,6 +124,7 @@ function displayPerson( person ) {
 
         partyEl.addEventListener("click", () => {
             cardEl.classList.add("card--party");
+            // Waits the CSS transition time before removing the class
             setTimeout(() => {
                 cardEl.classList.remove("card--party");
             }, 1000);
